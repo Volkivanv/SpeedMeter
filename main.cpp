@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+#include <cmath>
 
 int main() {
     float speed = 0.0f;
@@ -15,7 +16,7 @@ int main() {
         } else if(speed < 0) {
             speed = 0;
         }
-        text << "Car velocity is " << speed << " km/h.";
+        text << "Car velocity is " << round(speed*10)/10 << " km/h.";
         std::cout << text.str() << std::endl;
 
     }while(abs(speed - 0.0f)>0.01f);
